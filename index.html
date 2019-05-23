@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <header id="header">
@@ -14,7 +15,7 @@
         </div>
         
         <nav id="nav-bar">
-            <ul>
+            <ul id="nav-ul">
                 <li>
                     <a class="nav-link" href="#electric-anchor">Electric Guitars</a>
                 </li>
@@ -25,13 +26,25 @@
                     <a class="nav-link" href="#bass-anchor">Bass Guitars</a>
                 </li>
             </ul>
+
+            <!-- for media query (max-width: 555px) -->
+			<button id="dropdown-btn" onclick="dropDown()">
+				<div class="dropdown-icon"></div>
+				<div class="dropdown-icon"></div>
+				<div class="dropdown-icon"></div>
+			</button>
+			<ul id="dropdown-content">
+				<a href="#electric-anchor" onclick="dropDown()"><li>Electric Guitars</li></a>
+				<a href="#acoustic-anchor" onclick="dropDown()"><li>Acoustic Guitars</li></a>
+				<a href="#bass-anchor" onclick="dropDown()"><li>Bass Guitars</li></a>
+			</ul>
         </nav>
     </header>
 
     <div id="demo">
         <h1>Product Demo</h1>
-        <iframe id="video" width="420" height="315"
-            src="https://www.youtube.com/embed/MQlAq-tqQtA" frameborder="0">
+        <iframe id="video"
+            src="https://www.youtube.com/embed/MQlAq-tqQtA" frameborder="0" allowfullscreen>
         </iframe>
     </div>
     
@@ -70,7 +83,7 @@
         </div>
         <div class="box">
             <img class="box-img" src="https://www.guitarparadise.com.au/resources/00000000/product/product-2858/Earth100FSS-old.png">
-            <h2 class="box-name">Slope-Shouldered Dread</h2>
+            <h2 class="box-name">Dreadnought</h2>
             <h3 class="box-price">$480</h3>
             <button class="box-btn">Add to cart</button>
         </div>
